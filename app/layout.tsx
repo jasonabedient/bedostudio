@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with us. Fill out our contact form and we will get back to you as soon as possible.',
+  title: 'Bedo Studio | Creator Tools Collection',
+  description: 'Bedo Studio - Your complete toolkit for content creation including thumbnails, analytics, scripting, and more.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
+    <html lang="en">
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
