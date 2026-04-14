@@ -38,7 +38,8 @@ export default function middleware(req: NextRequest) {
   }
   
   // If we have a valid subdomain, rewrite to the appropriate page
-  if (subdomain) {
+  // Skip rewrites for the global contact page
+  if (subdomain && url.pathname !== "/contact") {
     // Rewrite to the subdomain's page
     return NextResponse.rewrite(new URL(`/${subdomain}${url.pathname === "/" ? "" : url.pathname}`, req.url))
   }

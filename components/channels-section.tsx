@@ -38,7 +38,7 @@ const channels = [
 
 export function ChannelsSection() {
   return (
-    <section id="channels" className="py-20 md:py-28">
+    <section id="channels" className="pt-10 pb-20 md:pt-16 md:pb-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
