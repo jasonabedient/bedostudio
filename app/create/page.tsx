@@ -26,6 +26,26 @@ export default function CreatePage() {
         "Behind-the-scenes content",
         "Community spotlights",
       ]}
+      videos={[
+        {
+          title: "I tried Vercel + V0 AI website builder (and it’s insane)!",
+          thumbnailUrl: "https://i.ytimg.com/vi/hCu9lU_wk1k/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=hCu9lU_wk1k",
+          views: "1.2K",
+        },
+        {
+          title: "Turn Notion Into Your Blog Engine | Antigravity Setup",
+          thumbnailUrl: "https://i.ytimg.com/vi/zq-_f8rr6Yw/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=zq-_f8rr6Yw",
+          views: "850",
+        },
+        {
+          title: "Vision Design System 2.0",
+          thumbnailUrl: "https://i.ytimg.com/vi/3EjYBQ5SQSQ/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=3EjYBQ5SQSQ",
+          views: "2.4K",
+        },
+      ]}
     />
   )
 }
