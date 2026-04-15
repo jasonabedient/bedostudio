@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft, Youtube, ExternalLink, Palette, DollarSign, Mountain } from "lucide-react"
 
 const iconMap = {
@@ -113,10 +114,12 @@ export function ChannelPage({
                   className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/50 hover:shadow-lg"
                 >
                   <div className="relative aspect-video overflow-hidden">
-                    <img
+                    <Image
                       src={video.thumbnailUrl}
                       alt={video.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity group-hover:opacity-100">
                       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white shadow-xl">
