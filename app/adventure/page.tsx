@@ -26,6 +26,26 @@ export default function AdventurePage() {
         "Travel tips & hacks",
         "Gear recommendations",
       ]}
+      videos={[
+        {
+          title: "Work life balance! Mountain biking and the Rivian R1S!",
+          thumbnailUrl: "https://i.ytimg.com/vi/QnLJ3zjAmfQ/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=QnLJ3zjAmfQ",
+          views: "1.2K",
+        },
+        {
+          title: "Gold robotaxis in the wild!",
+          thumbnailUrl: "https://i.ytimg.com/vi/EL9_k-jxcTY/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=EL9_k-jxcTY",
+          views: "3.5K",
+        },
+        {
+          title: "DIY Paint Protection Film on My Rivian R1S for Less!",
+          thumbnailUrl: "https://i.ytimg.com/vi/Q3FBOgLhdcY/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=Q3FBOgLhdcY",
+          views: "920",
+        },
+      ]}
     />
   )
 }

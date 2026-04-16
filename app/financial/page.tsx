@@ -26,6 +26,26 @@ export default function FinancialPage() {
         "Financial planning tips",
         "Economic news breakdowns",
       ]}
+      videos={[
+        {
+          title: "50 and Burned Out: How I Got My Drive Back!",
+          thumbnailUrl: "https://i.ytimg.com/vi/ikhbTfn4698/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=ikhbTfn4698",
+          views: "2.1K",
+        },
+        {
+          title: "Impulse shopping is killing your budget! Save $300 a month!",
+          thumbnailUrl: "https://i.ytimg.com/vi/m_pzlvFN00Q/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=m_pzlvFN00Q",
+          views: "1.5K",
+        },
+        {
+          title: "How i lost over $100,000 buying an out of state rental property!",
+          thumbnailUrl: "https://i.ytimg.com/vi/sPjXHXxWcPk/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=sPjXHXxWcPk",
+          views: "4.8K",
+        },
+      ]}
     />
   )
 }

@@ -20,8 +20,8 @@
   --accent-foreground: oklch(0.15 0.02 50);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.28 0.01 250);
-  --input: oklch(0.22 0.01 250);
+  --border: oklch(0.45 0.01 250);
+  --input: oklch(0.45 0.01 250);
   --ring: oklch(0.72 0.19 50);
   --chart-1: oklch(0.72 0.19 50);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -37,6 +37,21 @@
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.28 0.01 250);
   --sidebar-ring: oklch(0.72 0.19 50);
+}
+
+.theme-create {
+  --primary: oklch(0.72 0.19 50);
+  --ring: oklch(0.72 0.19 50);
+}
+
+.theme-financial {
+  --primary: oklch(0.7 0.25 145);
+  --ring: oklch(0.7 0.25 145);
+}
+
+.theme-adventure {
+  --primary: oklch(0.65 0.2 250);
+  --ring: oklch(0.65 0.2 250);
 }
 
 @theme inline {
