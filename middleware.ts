@@ -30,9 +30,9 @@ export default function middleware(req: NextRequest) {
     
     // Check for subdomain (e.g., create.bedo.studio has 3 parts)
     if (hostParts.length > 2 || (hostname.includes("localhost") && hostParts.length > 1 && hostParts[0] !== "localhost")) {
-      const potentialSubdomain = hostParts[0]
-      if (["create", "financial", "adventure"].includes(potentialSubdomain)) {
-        subdomain = potentialSubdomain
+      const potentialSubdomain = hostParts[0].toLowerCase()
+      if (["create", "financial", "finance", "adventure"].includes(potentialSubdomain)) {
+        subdomain = potentialSubdomain === "finance" ? "financial" : potentialSubdomain
       }
     }
   }
@@ -40,8 +40,11 @@ export default function middleware(req: NextRequest) {
   // If we have a valid subdomain, rewrite to the appropriate page
   // Skip rewrites for the global contact page
   if (subdomain && url.pathname !== "/contact") {
+    // Normalize path to lowercase for consistent routing (e.g. /Retirement-Blueprint -> /retirement-blueprint)
+    const normalizedPath = url.pathname.toLowerCase()
+    
     // Rewrite to the subdomain's page
-    return NextResponse.rewrite(new URL(`/${subdomain}${url.pathname === "/" ? "" : url.pathname}`, req.url))
+    return NextResponse.rewrite(new URL(`/${subdomain}${normalizedPath === "/" ? "" : normalizedPath}`, req.url))
   }
   
   return NextResponse.next()
