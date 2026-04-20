@@ -6,7 +6,8 @@ export const config = {
 
 export default function middleware(req: NextRequest) {
   const url = req.nextUrl
-  const hostname = req.headers.get("host") || ""
+  // Get the hostname (use x-forwarded-host on Vercel if host is not available)
+  const hostname = req.headers.get("x-forwarded-host") || req.headers.get("host") || ""
   
   // Get the subdomain (e.g., "create" from "create.bedo.studio")
   // Handle both production (bedo.studio) and preview deployments (*.vercel.app)
@@ -29,6 +30,7 @@ export default function middleware(req: NextRequest) {
     const hostParts = hostname.split(".")
     
     // Check for subdomain (e.g., create.bedo.studio has 3 parts)
+    // Or subdomain.localhost:3000
     if (hostParts.length > 2 || (hostname.includes("localhost") && hostParts.length > 1 && hostParts[0] !== "localhost")) {
       const potentialSubdomain = hostParts[0].toLowerCase()
       if (["create", "financial", "finance", "adventure"].includes(potentialSubdomain)) {
@@ -40,11 +42,13 @@ export default function middleware(req: NextRequest) {
   // If we have a valid subdomain, rewrite to the appropriate page
   // Skip rewrites for the global contact page
   if (subdomain && url.pathname !== "/contact") {
-    // Normalize path to lowercase for consistent routing (e.g. /Retirement-Blueprint -> /retirement-blueprint)
-    const normalizedPath = url.pathname.toLowerCase()
+    // Normalize path to lowercase and remove trailing slash for internal routing consistency
+    const normalizedPath = url.pathname.toLowerCase().replace(/\/$/, "") || "/"
     
     // Rewrite to the subdomain's page
-    return NextResponse.rewrite(new URL(`/${subdomain}${normalizedPath === "/" ? "" : normalizedPath}`, req.url))
+    // Using a relative rewrite path is often more robust in Next.js middleware
+    const rewritePath = `/${subdomain}${normalizedPath === "/" ? "" : normalizedPath}`
+    return NextResponse.rewrite(new URL(rewritePath, req.url))
   }
   
   return NextResponse.next()
