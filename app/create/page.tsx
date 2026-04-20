@@ -15,9 +15,9 @@ export default function CreatePage() {
       longDescription="Bedo Create is your destination for learning and building. Whether you're a beginner looking to pick up new skills or an experienced creator seeking fresh ideas, we've got content tailored for you. Our tutorials are designed to be practical, engaging, and easy to follow along with at home."
       iconName="Palette"
       youtubeUrl="https://youtube.com/@bedocreate"
-      color="from-orange-500/20 to-amber-500/20"
-      accentColor="text-orange-500"
-      bgAccent="bg-orange-500/10"
+      color="from-purple-500/20 to-indigo-500/20"
+      accentColor="text-purple-500"
+      bgAccent="bg-purple-500/10"
       features={[
         "Step-by-step tutorials",
         "DIY project guides",
