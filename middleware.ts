@@ -43,8 +43,13 @@ export default function middleware(req: NextRequest) {
     // Normalize path to lowercase for consistent routing (e.g. /Retirement-Blueprint -> /retirement-blueprint)
     const normalizedPath = url.pathname.toLowerCase()
     
+    // Build the rewrite path - for root path, just use the subdomain folder
+    const rewritePath = normalizedPath === "/" || normalizedPath === "" 
+      ? `/${subdomain}` 
+      : `/${subdomain}${normalizedPath}`
+    
     // Rewrite to the subdomain's page
-    return NextResponse.rewrite(new URL(`/${subdomain}${normalizedPath === "/" ? "" : normalizedPath}`, req.url))
+    return NextResponse.rewrite(new URL(rewritePath, req.url))
   }
   
   return NextResponse.next()
