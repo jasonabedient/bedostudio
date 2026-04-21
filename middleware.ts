@@ -6,46 +6,73 @@ export const config = {
 
 export default function middleware(req: NextRequest) {
   const url = req.nextUrl
-  const hostname = req.headers.get("host") || ""
+  const hostname = req.headers.get("x-forwarded-host") || req.headers.get("host") || ""
   
-  // Get the subdomain (e.g., "create" from "create.bedo.studio")
-  // Handle both production (bedo.studio) and preview deployments (*.vercel.app)
-  const allowedDomains = ["bedo.studio", "localhost:3000"]
+  // Define our core channels and their mapping
+  const channels = ["create", "financial", "adventure"]
+  const channelAliases: Record<string, string> = {
+    finance: "financial",
+  }
+
+  // Normalize path
+  const path = url.pathname.toLowerCase()
+  const normalizedPath = path.replace(/\/$/, "") || "/"
   
-  // Check if we're on a Vercel preview deployment
-  const isVercelPreview = hostname.includes(".vercel.app")
-  
+  // 1. Handle production subdomain detection
+  const hostParts = hostname.split(".")
   let subdomain: string | null = null
   
+  // Check if we're on a Vercel preview or localhost
+  const isVercelPreview = hostname.includes(".vercel.app")
+  const isLocalhost = hostname.includes("localhost")
+  
   if (isVercelPreview) {
-    // For Vercel preview URLs like create--project.vercel.app or create.project.vercel.app
-    // We'll use query params or path-based routing for preview
-    const pathSubdomain = url.searchParams.get("subdomain")
-    if (pathSubdomain) {
-      subdomain = pathSubdomain
+    subdomain = url.searchParams.get("subdomain")
+  } else if (!isLocalhost && hostParts.length > 2) {
+    // e.g., create.bedo.studio -> parts are ["create", "bedo", "studio"]
+    const potentialSubdomain = hostParts[0].toLowerCase()
+    if (channels.includes(potentialSubdomain) || channelAliases[potentialSubdomain]) {
+      subdomain = channelAliases[potentialSubdomain] || potentialSubdomain
     }
-  } else {
-    // Production subdomain detection
-    const hostParts = hostname.split(".")
-    
-    // Check for subdomain (e.g., create.bedo.studio has 3 parts)
-    if (hostParts.length > 2 || (hostname.includes("localhost") && hostParts.length > 1 && hostParts[0] !== "localhost")) {
-      const potentialSubdomain = hostParts[0].toLowerCase()
-      if (["create", "financial", "finance", "adventure"].includes(potentialSubdomain)) {
-        subdomain = potentialSubdomain === "finance" ? "financial" : potentialSubdomain
+  } else if (isLocalhost && hostParts.length > 1 && hostParts[0] !== "localhost") {
+    // e.g., create.localhost:3000
+    const potentialSubdomain = hostParts[0].toLowerCase()
+    if (channels.includes(potentialSubdomain) || channelAliases[potentialSubdomain]) {
+      subdomain = channelAliases[potentialSubdomain] || potentialSubdomain
+    }
+  }
+
+  // 2. RESTRICTION: Redirect path-based access on main domain to subdomains
+  // If we are on the main domain (no subdomain detected) and hitting a channel path
+  if (!subdomain && !isVercelPreview) {
+    const firstSegment = normalizedPath.split("/")[1]
+    if (channels.includes(firstSegment) || channelAliases[firstSegment]) {
+      const targetSubdomain = channelAliases[firstSegment] || firstSegment
+      const targetPath = normalizedPath.replace(`/${firstSegment}`, "") || "/"
+      
+      // Only redirect in production environments where bedos.studio is used
+      if (hostname.includes("bedo.studio")) {
+        return NextResponse.redirect(new URL(`https://${targetSubdomain}.bedo.studio${targetPath}`, req.url), 301)
       }
     }
   }
-  
-  // If we have a valid subdomain, rewrite to the appropriate page
-  // Skip rewrites for the global contact page
-  if (subdomain && url.pathname !== "/contact") {
-    // Normalize path to lowercase for consistent routing (e.g. /Retirement-Blueprint -> /retirement-blueprint)
-    const normalizedPath = url.pathname.toLowerCase()
-    
-    // Rewrite to the subdomain's page
-    return NextResponse.rewrite(new URL(`/${subdomain}${normalizedPath === "/" ? "" : normalizedPath}`, req.url))
+
+  // 3. CLEANUP: Redirect subdomain/channel-name to subdomain root
+  // e.g., financial.bedo.studio/financial -> financial.bedo.studio/
+  if (subdomain) {
+    const firstSegment = normalizedPath.split("/")[1]
+    if (firstSegment === subdomain || channelAliases[firstSegment] === subdomain) {
+      const targetPath = normalizedPath.replace(`/${firstSegment}`, "") || "/"
+      return NextResponse.redirect(new URL(targetPath, req.url))
+    }
+  }
+
+  // 4. ROUTING: Internal rewrite to the subdomain folder
+  if (subdomain && path !== "/contact") {
+    const rewritePath = `/${subdomain}${normalizedPath === "/" ? "" : normalizedPath}`
+    return NextResponse.rewrite(new URL(rewritePath, req.url))
   }
   
   return NextResponse.next()
 }
+
