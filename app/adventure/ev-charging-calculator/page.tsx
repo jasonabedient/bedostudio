@@ -72,6 +72,36 @@ const evData: Record<string, Record<string, Record<string, number>>> = {
       "300": 90.0,
       "350+": 107.8,
     },
+        // Cadillac
+    "Cadillac Lyriq": {
+      "Luxury RWD": 102.0,
+      "Sport AWD": 102.0,
+    },
+    // Polestar
+    "Polestar 2": {
+      "Standard Range": 67.0,
+      "Long Range Single Motor": 79.0,
+      "Long Range Dual Motor": 79.0,
+      "Long Range Performance": 79.0,
+    },
+    "Polestar 3": {
+      "Long Range Dual Motor": 107.0,
+      "Performance": 107.0,
+    },
+    "Polestar 4": {
+      "Long Range RWD": 100.0,
+      "Long Range AWD": 100.0,
+    },
+    // Lucid
+    "Lucid Air": {
+      "Pure RWD": 84.0,
+      "Touring AWD": 92.0,
+      "Grand Touring AWD": 117.0,
+    },
+    "Lucid Gravity": {
+      "Touring AWD": 89.0,
+      "Grand Touring AWD": 123.0,
+    },
   },
   "2025": {
     // Tesla
@@ -132,6 +162,36 @@ const evData: Record<string, Record<string, Record<string, number>>> = {
     "Mercedes EQE": {
       "300": 90.0,
       "350+": 107.8,
+    },
+        // Cadillac
+    "Cadillac Lyriq": {
+      "Luxury RWD": 102.0,
+      "Sport AWD": 102.0,
+    },
+    // Polestar
+    "Polestar 2": {
+      "Standard Range": 67.0,
+      "Long Range Single Motor": 79.0,
+      "Long Range Dual Motor": 79.0,
+      "Long Range Performance": 79.0,
+    },
+    "Polestar 3": {
+      "Long Range Dual Motor": 107.0,
+      "Performance": 107.0,
+    },
+    "Polestar 4": {
+      "Long Range RWD": 100.0,
+      "Long Range AWD": 100.0,
+    },
+    // Lucid
+    "Lucid Air": {
+      "Pure RWD": 84.0,
+      "Touring AWD": 92.0,
+      "Grand Touring AWD": 117.0,
+    },
+    "Lucid Gravity": {
+      "Touring AWD": 89.0,
+      "Grand Touring AWD": 123.0,
     },
   },
   "2024": {
