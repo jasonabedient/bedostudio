@@ -24,6 +24,54 @@ const evData: Record<string, Record<string, Record<string, number>>> = {
       "Long Range AWD": 78.4,
       "Performance AWD": 78.4,
     },
+        // Rivian
+    "Rivian R1S": {
+      "Dual Standard AWD": 92.5,
+      "Dual Large AWD": 108.5,
+      "Dual Max AWD": 140.0,
+      "Tri Standard AWD": 92.5,
+      "Tri Large AWD": 108.5,
+      "Tri Max AWD": 140.0,
+    },
+    "Rivian R1T": {
+      "Dual Standard AWD": 92.5,
+      "Dual Large AWD": 108.5,
+      "Dual Max AWD": 140.0,
+      "Tri Standard AWD": 92.5,
+      "Tri Large AWD": 108.5,
+      "Tri Max AWD": 140.0,
+    },
+    // Ford
+    "Ford Mustang Mach-E": {
+      "RWD": 70.8,
+      "AWD": 91.0,
+      "Premium": 91.0,
+    },
+    "Ford F-150 Lightning": {
+      "Standard": 110.0,
+      "Extended": 131.0,
+      "Ultra": 131.0,
+    },
+    // Hyundai
+    "Hyundai IONIQ 5": {
+      "RWD": 58.0,
+      "AWD": 73.0,
+      "N": 84.0,
+    },
+    "Hyundai IONIQ 6": {
+      "RWD": 53.0,
+      "AWD": 62.0,
+    },
+    // BMW
+    "BMW i4": {
+      "eDrive40": 81.5,
+      "M50": 84.3,
+    },
+    // Mercedes
+    "Mercedes EQE": {
+      "300": 90.0,
+      "350+": 107.8,
+    },
   },
   "2025": {
     // Tesla
@@ -36,6 +84,54 @@ const evData: Record<string, Record<string, Record<string, number>>> = {
       "Standard Range RWD": 60.0,
       "Long Range AWD": 78.4,
       "Performance AWD": 78.4,
+    },
+        // Rivian
+    "Rivian R1S": {
+      "Dual Standard AWD": 92.5,
+      "Dual Large AWD": 108.5,
+      "Dual Max AWD": 140.0,
+      "Tri Standard AWD": 92.5,
+      "Tri Large AWD": 108.5,
+      "Tri Max AWD": 140.0,
+    },
+    "Rivian R1T": {
+      "Dual Standard AWD": 92.5,
+      "Dual Large AWD": 108.5,
+      "Dual Max AWD": 140.0,
+      "Tri Standard AWD": 92.5,
+      "Tri Large AWD": 108.5,
+      "Tri Max AWD": 140.0,
+    },
+    // Ford
+    "Ford Mustang Mach-E": {
+      "RWD": 70.8,
+      "AWD": 91.0,
+      "Premium": 91.0,
+    },
+    "Ford F-150 Lightning": {
+      "Standard": 110.0,
+      "Extended": 131.0,
+      "Ultra": 131.0,
+    },
+    // Hyundai
+    "Hyundai IONIQ 5": {
+      "RWD": 58.0,
+      "AWD": 73.0,
+      "N": 84.0,
+    },
+    "Hyundai IONIQ 6": {
+      "RWD": 53.0,
+      "AWD": 62.0,
+    },
+    // BMW
+    "BMW i4": {
+      "eDrive40": 81.5,
+      "M50": 84.3,
+    },
+    // Mercedes
+    "Mercedes EQE": {
+      "300": 90.0,
+      "350+": 107.8,
     },
   },
   "2024": {
