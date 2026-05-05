@@ -629,7 +629,12 @@ export default function VoltChargePage() {
   const handleEmailSubmit = (e: FormEvent) => {
     e.preventDefault()
     if (email) {
-      console.log("[v0] Lead captured:", { email, vehicle: `${year} ${make} ${trim}`, results: calculatedResults })
+                  // Send to MailerLite
+            fetch("/api/mailerlite", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email, source: "ev_calculator_gate" }),
+            }).catch(console.error)
       setEmailSubmitted(true)
       setShowEmailPrompt(false)
       setShowResults(true)
