@@ -1,3 +1,4 @@
+"use client";
 import { useState, FormEvent, ChangeEvent } from "react"
 import { ArrowLeft, Zap, Clock, DollarSign, Mail, Battery, Plug, Timer } from "lucide-react"
 import Link from "next/link"
