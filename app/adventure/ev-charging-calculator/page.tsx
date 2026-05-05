@@ -12,6 +12,32 @@ import { Label } from "@/components/ui/label"
 
 // EV Battery Data
 const evData: Record<string, Record<string, Record<string, number>>> = {
+  "2026": {
+    // Tesla
+    "Tesla Model 3": {
+      "Standard Range RWD": 60.0,
+      "Long Range AWD": 78.4,
+      "Performance AWD": 78.4,
+    },
+    "Tesla Model Y": {
+      "Standard Range RWD": 60.0,
+      "Long Range AWD": 78.4,
+      "Performance AWD": 78.4,
+    },
+  },
+  "2025": {
+    // Tesla
+    "Tesla Model 3": {
+      "Standard Range RWD": 60.0,
+      "Long Range AWD": 78.4,
+      "Performance AWD": 78.4,
+    },
+    "Tesla Model Y": {
+      "Standard Range RWD": 60.0,
+      "Long Range AWD": 78.4,
+      "Performance AWD": 78.4,
+    },
+  },
   "2024": {
     // Tesla
     "Tesla Model 3": {
