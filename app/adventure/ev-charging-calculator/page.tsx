@@ -368,23 +368,23 @@ export default function EVChargeCalculator() {
               <div style={{ padding: 32, borderRadius: '2.5rem', border: '1px solid rgba(34,211,238,0.3)', background: 'rgba(34,211,238,0.06)' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                   <div style={{ width: 48, height: 48, borderRadius: '50%', background: '#22d3ee', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
-                    <Mail style={{ width: 24, height: 24, color: '#000000' }} />
-                  </div>
+    <div>
                   <h3 style={{ fontSize: 18, fontWeight: 700, color: '#fafafa', marginBottom: 4 }}>Report Sent</h3>
                   <p style={{ fontSize: 13, color: '#a1a1aa', marginBottom: 16 }}>Your full charging breakdown has been sent.</p>
                   <div style={{ width: '100%', borderTop: '1px solid rgba(34,211,238,0.2)', paddingTop: 16 }}>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, textAlign: 'center' }}>
                       <div><div style={{ fontSize: 10, color: '#71717a', textTransform: 'uppercase', letterSpacing: 1 }}>Weekly</div><div style={{ fontSize: 18, fontWeight: 700, color: '#22d3ee' }}>${costs.weekly.toFixed(2)}</div></div>
-                      <div><div style={{ fontSize: 10, color: '#71717a', textTransform: 'uppercase', letterSpacing: 1 }}>Monthly</div><div style={{ fontSize: 18, fontWeight: 700, color: '#22d3ee' }}>${costs.monthly.toFixed(2)}</div></div>
+                      <div><div style={{ fontSize: 10, color: Fixed duplicate ))} and missing </div>. Proper closing order: ternary ), grid </div>, showResults )}, left column </div>, main </main>.'#71717a', textTransform: 'uppercase', letterSpacing: 1 }}>Monthly</div><div style={{ fontSize: 18, fontWeight: 700, color: '#22d3ee' }}>${costs.monthly.toFixed(2)}</div></div>
                       <div><div style={{ fontSize: 10, color: '#71717a', textTransform: 'uppercase', letterSpacing: 1 }}>Yearly</div><div style={{ fontSize: 18, fontWeight: 700, color: '#22d3ee' }}>${costs.yearly.toFixed(2)}</div></div>
                     </div>
                     <p style={{ fontSize: 10, color: '#71717a', marginTop: 12 }}>At ${rateWithTou.toFixed(4)}/kWh · {sessionsPerWeek}x/week</p>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-        )}
+              </div
+           )}
+
+    </div>
+    )}
         </div>
       </main>
 
