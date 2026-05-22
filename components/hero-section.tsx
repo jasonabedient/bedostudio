@@ -15,7 +15,7 @@ export function HeroSection() {
             <span className="text-primary">Bedo Studio</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
-            Three channels, one creative vision. Explore creativity, finance, and adventure through our collection of YouTube content designed to inspire and educate.
+            Three channels, one creative vision. Explore creativity, freedom, and adventure through our collection of YouTube content designed to inspire and educate.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

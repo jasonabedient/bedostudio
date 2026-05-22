@@ -3,7 +3,7 @@ import Link from "next/link"
 import { ArrowLeft, CheckCircle2, Compass, ShieldCheck, TrendingUp, Wallet, Info } from "lucide-react"
 
 export const metadata = {
-  title: "5-Year Retirement Plan Blueprint | Bedo Financial",
+  title: "5-Year Retirement Plan Blueprint | Bedo Freedom",
   description: "Download your free 5-Year Retirement Plan Blueprint and start planning your financial future today.",
 }
 
@@ -35,13 +35,13 @@ export default function RetirementBlueprintPage() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
             <ArrowLeft className="h-5 w-5" />
-            <span className="text-sm font-medium">Back to Bedo Financial</span>
+            <span className="text-sm font-medium">Back to Bedo Freedom</span>
           </Link>
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded bg-emerald-500 flex items-center justify-center">
               <Wallet className="h-5 w-5 text-white" />
             </div>
-            <span className="font-bold tracking-tight">BEDO FINANCIAL</span>
+            <span className="font-bold tracking-tight">BEDO FREEDOM</span>
           </div>
         </div>
       </header>
@@ -157,7 +157,7 @@ export default function RetirementBlueprintPage() {
               <div className="h-6 w-6 rounded bg-emerald-500/20 flex items-center justify-center">
                 <Wallet className="h-3.5 w-3.5 text-emerald-500" />
               </div>
-              <span className="font-semibold tracking-tight text-sm">BEDO FINANCIAL</span>
+              <span className="font-semibold tracking-tight text-sm">BEDO FREEDOM</span>
             </div>
             <p className="text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()} Bedo Studio. All rights reserved.

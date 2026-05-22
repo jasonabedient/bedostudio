@@ -9,9 +9,9 @@ export default function middleware(req: NextRequest) {
   const hostname = req.headers.get("x-forwarded-host") || req.headers.get("host") || ""
   
   // Define our core channels and their mapping
-  const channels = ["create", "financial", "adventure"]
+  const channels = ["create", "freedom", "adventure"]
   const channelAliases: Record<string, string> = {
-    finance: "financial",
+    finance: "freedom",
   }
 
   // Normalize path
@@ -58,7 +58,7 @@ export default function middleware(req: NextRequest) {
   }
 
   // 3. CLEANUP: Redirect subdomain/channel-name to subdomain root
-  // e.g., financial.bedo.studio/financial -> financial.bedo.studio/
+  // e.g., freedom.bedo.studio/financial -> freedom.bedo.studio/
   if (subdomain) {
     const firstSegment = normalizedPath.split("/")[1]
     if (firstSegment === subdomain || channelAliases[firstSegment] === subdomain) {

@@ -6,19 +6,19 @@ interface HeaderProps {
 }
 
 export function Header({ host }: HeaderProps) {
-  const isFinancial = host?.includes('financial')
+  const isFreedom = host?.includes('freedom') || host?.includes('financial')
   const isAdventure = host?.includes('adventure')
-  const isCreate = !isFinancial && !isAdventure
+  const isCreate = !isFreedom && !isAdventure
 
   let subdomainName = 'Bedo Studio'
   let subdomainUrl = 'https://bedo.studio'
   let youtubeUrl = 'https://youtube.com/@bedocreate' // Default
   let Icon = Palette
 
-  if (isFinancial) {
-    subdomainName = 'Bedo Financial'
-    subdomainUrl = 'https://financial.bedo.studio'
-    youtubeUrl = 'https://youtube.com/@bedofinancial'
+  if (isFreedom) {
+    subdomainName = 'Bedo Freedom'
+    subdomainUrl = 'https://freedom.bedo.studio'
+    youtubeUrl = 'https://youtube.com/@bedofreedom'
     Icon = DollarSign
   } else if (isAdventure) {
     subdomainName = 'Bedo Adventure'
