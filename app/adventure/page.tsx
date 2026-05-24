@@ -28,22 +28,22 @@ export default function AdventurePage() {
       ]}
       videos={[
         {
-          title: "Work life balance! Mountain biking and the Rivian R1S!",
+          title: "Hyundai IONIQ6 ICCU Failure Denied Complete Buy back. Don't Make This Mistake!",
+          thumbnailUrl: "https://i.ytimg.com/vi/1nJHf-9Kk58/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=1nJHf-9Kk58",
+          views: "96",
+        },
+        {
+          title: "Your EV Charger Might Be Slower Than You Think!",
+          thumbnailUrl: "https://i.ytimg.com/vi/Wp7OprE7Txk/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=Wp7OprE7Txk",
+          views: "409",
+        },
+        {
+          title: "Is the Rivian R1S the perfect adventure vehicle?",
           thumbnailUrl: "https://i.ytimg.com/vi/QnLJ3zjAmfQ/maxresdefault.jpg",
           videoUrl: "https://www.youtube.com/watch?v=QnLJ3zjAmfQ",
-          views: "1.2K",
-        },
-        {
-          title: "Gold robotaxis in the wild!",
-          thumbnailUrl: "https://i.ytimg.com/vi/EL9_k-jxcTY/maxresdefault.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=EL9_k-jxcTY",
-          views: "3.5K",
-        },
-        {
-          title: "DIY Paint Protection Film on My Rivian R1S for Less!",
-          thumbnailUrl: "https://i.ytimg.com/vi/Q3FBOgLhdcY/maxresdefault.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=Q3FBOgLhdcY",
-          views: "920",
+          views: "27",
         },
       ]}
     />

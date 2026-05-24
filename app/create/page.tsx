@@ -28,22 +28,22 @@ export default function CreatePage() {
       ]}
       videos={[
         {
-          title: "I tried Vercel + V0 AI website builder (and it’s insane)!",
-          thumbnailUrl: "https://i.ytimg.com/vi/hCu9lU_wk1k/maxresdefault.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=hCu9lU_wk1k",
-          views: "1.2K",
+          title: "Is Google Stitch the Figma Killer? (A UX Designer’s Take)",
+          thumbnailUrl: "https://i.ytimg.com/vi/4fuqUF_4rvI/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=4fuqUF_4rvI",
+          views: "17",
         },
         {
-          title: "Turn Notion Into Your Blog Engine | Antigravity Setup",
-          thumbnailUrl: "https://i.ytimg.com/vi/zq-_f8rr6Yw/maxresdefault.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=zq-_f8rr6Yw",
-          views: "850",
+          title: "Turn Any Photo Into Gallery-Worthy Art (Nano Banana + Figma Workflow)",
+          thumbnailUrl: "https://i.ytimg.com/vi/CcAE77OS1lQ/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=CcAE77OS1lQ",
+          views: "4",
         },
         {
-          title: "Vision Design System 2.0",
-          thumbnailUrl: "https://i.ytimg.com/vi/3EjYBQ5SQSQ/maxresdefault.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=3EjYBQ5SQSQ",
-          views: "2.4K",
+          title: "Automate Figma Color Swatches with Claude (Mind-Blowing Speed)",
+          thumbnailUrl: "https://i.ytimg.com/vi/Cg8ux-iCFTA/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/watch?v=Cg8ux-iCFTA",
+          views: "7",
         },
       ]}
     />
