@@ -108,7 +108,7 @@ export default function SubscribeForm() {
                     The Freedom Blueprint
                   </h1>
                   <p className="text-muted-foreground text-base leading-relaxed md:text-lg">
-                    Weekly personal finance tips, passive income strategies, and portfolio building guides. Straight from my private notes, direct to your inbox.
+                    Weekly insights on F.I.R.E. investing, intentional minimalism, and buying back your time. Straight from my private notes, direct to your inbox.
                   </p>
                 </div>
 
@@ -119,7 +119,7 @@ export default function SubscribeForm() {
                       <Check className="h-3.5 w-3.5" />
                     </div>
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground font-semibold">Portfolio Mapping:</strong> Behind-the-scenes breakdowns of asset allocation, index fund picks, and retirement paycheck models.
+                      <strong className="text-foreground font-semibold">F.I.R.E. Investing to Retire Early:</strong> Behind-the-scenes breakdowns of how to build a compounding engine that funds your autonomy, so you can retire early—or design a life you don't need to retire from.
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
@@ -127,7 +127,7 @@ export default function SubscribeForm() {
                       <Check className="h-3.5 w-3.5" />
                     </div>
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground font-semibold">Tax & Sequence Defense:</strong> Practical tips to legally minimize your tax bill and safeguard your savings from sequence-of-returns risk.
+                      <strong className="text-foreground font-semibold">Minimalism & Mental Freedom:</strong> Practical strategies to declutter your financial life, reduce mental noise, and align your money with your true values. Because true wealth is a quiet mind.
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
@@ -135,7 +135,7 @@ export default function SubscribeForm() {
                       <Check className="h-3.5 w-3.5" />
                     </div>
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground font-semibold">Zero Confusion:</strong> Plain English, jargon-free explanations of complex economic trends. Sent directly to your inbox.
+                      <strong className="text-foreground font-semibold">Frivolous on Freedom:</strong> Honest, jargon-free insights on how to transition your active income into ultimate time autonomy. No complex Wall Street fluff—just raw, actionable steps to buy your freedom.
                     </span>
                   </div>
                 </div>
