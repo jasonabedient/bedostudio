@@ -29,6 +29,11 @@ interface ChannelPageProps {
   bgAccent: string
   features: string[]
   videos?: YouTubeVideo[]
+  subscribeUrl?: string
+  subscribeColor?: string
+  showYoutubeIcon?: boolean
+  ctaDescription?: string
+  ctaSubscribeText?: string
 }
 
 export function ChannelPage({
@@ -43,8 +48,14 @@ export function ChannelPage({
   bgAccent,
   features,
   videos = [],
+  subscribeUrl,
+  subscribeColor = "bg-red-600 hover:bg-red-700",
+  showYoutubeIcon = true,
+  ctaDescription,
+  ctaSubscribeText = "Subscribe on YouTube",
 }: ChannelPageProps) {
   const Icon = iconMap[iconName]
+  const isExternal = !subscribeUrl || subscribeUrl.startsWith("http")
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -55,12 +66,12 @@ export function ChannelPage({
             <span className="text-sm font-medium">Back to Bedo Studio</span>
           </Link>
           <Link
-            href={youtubeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-red-700"
+            href={subscribeUrl || youtubeUrl}
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            className={`inline-flex items-center gap-2 rounded-lg ${subscribeColor} px-4 py-2 text-sm font-medium text-white transition-colors`}
           >
-            <Youtube className="h-4 w-4" />
+            {showYoutubeIcon && <Youtube className="h-4 w-4" />}
             Subscribe
           </Link>
         </div>
@@ -175,17 +186,17 @@ export function ChannelPage({
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold text-foreground">Ready to Join?</h2>
             <p className="mb-8 text-muted-foreground">
-              Subscribe to {subtitle} on YouTube and become part of our growing community.
+              {ctaDescription || `Subscribe to ${subtitle} on YouTube and become part of our growing community.`}
             </p>
             <Link
-              href={youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-red-700"
+              href={subscribeUrl || youtubeUrl}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+              className={`inline-flex items-center gap-2 rounded-lg ${subscribeColor} px-8 py-4 text-lg font-medium text-white transition-colors`}
             >
-              <Youtube className="h-6 w-6" />
-              Subscribe on YouTube
-              <ExternalLink className="h-4 w-4" />
+              {showYoutubeIcon && <Youtube className="h-6 w-6" />}
+              {ctaSubscribeText}
+              {isExternal && <ExternalLink className="h-4 w-4" />}
             </Link>
           </div>
         </div>

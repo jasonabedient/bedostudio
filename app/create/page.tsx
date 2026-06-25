@@ -15,6 +15,11 @@ export default function CreatePage() {
       longDescription="Bedo Create is your destination for learning and building. Whether you're a beginner looking to pick up new skills or an experienced creator seeking fresh ideas, we've got content tailored for you. Our tutorials are designed to be practical, engaging, and easy to follow along with at home."
       iconName="Palette"
       youtubeUrl="https://youtube.com/@bedocreate"
+      subscribeUrl="/subscribe"
+      subscribeColor="bg-orange-600 hover:bg-orange-700"
+      showYoutubeIcon={false}
+      ctaDescription="Join The Draft Bin newsletter to get raw ideas, UI/UX design assets, and practical AI workflows."
+      ctaSubscribeText="Subscribe to Newsletter"
       color="from-purple-500/20 to-indigo-500/20"
       accentColor="text-purple-500"
       bgAccent="bg-purple-500/10"
