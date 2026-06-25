@@ -108,7 +108,7 @@ export default function SubscribeForm() {
                     The Adventure Dispatch
                   </h1>
                   <p className="text-muted-foreground text-base leading-relaxed md:text-lg">
-                    Weekly logs on electric vehicles, hands-on tech, and curiosity-driven exploration. Straight from my private notes, direct to your inbox.
+                    Weekly insights on electric vehicles, solar power, battery tech, and real-world adventure gear. Straight from my private notes, direct to your inbox.
                   </p>
                 </div>
 
@@ -119,7 +119,7 @@ export default function SubscribeForm() {
                       <Check className="h-3.5 w-3.5" />
                     </div>
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground font-semibold">EV & Adventure Tech:</strong> In-depth breakdowns of electric vehicles, charging speeds, and hands-on tech reviews before you buy.
+                      <strong className="text-foreground font-semibold">EV & Clean Energy Tech:</strong> Deep dives into electric vehicles, home and mobile solar setups, and battery storage. Real-world data on charging speeds and energy efficiency to help you make smart decisions before you buy.
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
@@ -127,7 +127,7 @@ export default function SubscribeForm() {
                       <Check className="h-3.5 w-3.5" />
                     </div>
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground font-semibold">Exploration & Travel Logs:</strong> Behind-the-scenes vlogs, trail reports, and destination guides to help you step outside your comfort zone.
+                      <strong className="text-foreground font-semibold">Off-Grid Exploration:</strong> Behind-the-scenes logs of EV road trips, off-grid adventures, and guides to stepping outside your comfort zone using modern technology.
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
@@ -135,7 +135,7 @@ export default function SubscribeForm() {
                       <Check className="h-3.5 w-3.5" />
                     </div>
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground font-semibold">Gear & Travel Hacks:</strong> Honest, zero-fluff recommendations on adventure gear and road-trip strategies that actually save you time and money.
+                      <strong className="text-foreground font-semibold">Gear & Power Hacks:</strong> Honest, zero-fluff recommendations on portable power stations, solar gear, and road-trip strategies that keep you powered up and save you time on the road.
                     </span>
                   </div>
                 </div>
