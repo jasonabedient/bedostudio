@@ -15,6 +15,11 @@ export default function FreedomPage() {
       longDescription="Bedo Freedom breaks down complex money topics into digestible, actionable content. From budgeting basics to advanced investing strategies, we cover it all without the confusing jargon. Our goal is to help you make smarter financial decisions and build long-term wealth through education and practical advice."
       iconName="DollarSign"
       youtubeUrl="https://youtube.com/@bedofreedom"
+      subscribeUrl="/subscribe"
+      subscribeColor="bg-emerald-600 hover:bg-emerald-700"
+      showYoutubeIcon={false}
+      ctaDescription="Join The Freedom Blueprint newsletter to get tactical guides on personal finance, wealth building, and passive income."
+      ctaSubscribeText="Subscribe to Newsletter"
       color="from-emerald-500/20 to-teal-500/20"
       accentColor="text-emerald-500"
       bgAccent="bg-emerald-500/10"
