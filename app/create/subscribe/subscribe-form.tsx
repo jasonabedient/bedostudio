@@ -127,7 +127,15 @@ export default function SubscribeForm() {
                       <Check className="h-3.5 w-3.5" />
                     </div>
                     <span className="text-muted-foreground">
-                      <strong className="text-foreground font-semibold">AI Coded Products:</strong> Step-by-step breakdowns of how I code real-world tools like <em className="not-italic text-primary font-medium">DesignResume</em>.
+                      <strong className="text-foreground font-semibold">AI Coded Products:</strong> Step-by-step breakdowns of how I code real-world tools like{" "}
+                      <a 
+                        href="https://whatsthecharge.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-medium text-primary hover:underline underline-offset-4"
+                      >
+                        What's The Charge
+                      </a>.
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
