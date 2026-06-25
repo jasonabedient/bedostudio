@@ -15,6 +15,11 @@ export default function AdventurePage() {
       longDescription="Bedo Adventure takes you on journeys to incredible destinations around the globe. From hiking remote trails to exploring vibrant cities, we capture the essence of travel and share it with our community. Our videos are designed to inspire you to step outside your comfort zone and experience the world."
       iconName="Mountain"
       youtubeUrl="https://youtube.com/@bedoadventure"
+      subscribeUrl="/subscribe"
+      subscribeColor="bg-sky-600 hover:bg-sky-700"
+      showYoutubeIcon={false}
+      ctaDescription="Join The Adventure Dispatch newsletter to get raw logs on electric vehicles, hands-on tech, and road trip logs."
+      ctaSubscribeText="Subscribe to Newsletter"
       color="from-sky-500/20 to-indigo-500/20"
       accentColor="text-sky-500"
       bgAccent="bg-sky-500/10"
