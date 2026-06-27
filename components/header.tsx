@@ -14,10 +14,10 @@ export function Header() {
           <span className="text-lg font-semibold text-foreground">Bedo Studio</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
-          <Link href="#channels" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <Link href="/#channels" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             Channels
           </Link>
-          <Link href="#about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <Link href="/#about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             About
           </Link>
           <Link href="/contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
@@ -26,7 +26,7 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-3">
           <Link
-            href="#channels"
+            href="/#channels"
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Explore
