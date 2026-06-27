@@ -5,7 +5,7 @@ import { EmailLink } from '@/components/email-link'
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
         <div className="relative isolate overflow-hidden">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             
@@ -57,7 +57,7 @@ export default function ContactPage() {
 
             {/* Right Column - Form */}
             <div className="relative">
-              <div className="rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-8 shadow-2xl ring-1 ring-white/10">
+              <div className="rounded-2xl border border-border bg-card/50 backdrop-blur-sm py-4 px-6 shadow-2xl ring-1 ring-white/10">
                 <div className="mb-5">
                   <h2 className="text-2xl font-semibold text-foreground">
                     Send a Message

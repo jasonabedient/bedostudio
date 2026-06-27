@@ -63,7 +63,7 @@ export function ContactForm() {
   }
 
   return (
-    <form action={formAction} className="flex flex-col gap-5">
+    <form action={formAction} className="flex flex-col gap-4">
       {state.message && !state.success && (
         <div className="flex items-center gap-3 rounded-xl border-2 border-destructive/50 bg-destructive/10 px-5 py-4 text-sm font-semibold text-destructive animate-in slide-in-from-top-4 duration-300">
           <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-destructive/20">
@@ -73,8 +73,8 @@ export function ContactForm() {
         </div>
       )}
 
-      <FieldGroup className="space-y-4">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <FieldGroup className="space-y-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <Field data-invalid={!!state.errors?.name}>
             <FieldLabel htmlFor="name">Full Name</FieldLabel>
             <Input
