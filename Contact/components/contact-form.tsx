@@ -1,7 +1,8 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
 import { CheckCircle2, Send } from 'lucide-react'
+import { toast } from 'sonner'
 
 import { submitContactForm, type ContactFormState } from '@/app/actions/contact'
 import { Button } from '@/components/ui/button'
@@ -28,6 +29,16 @@ export function ContactForm() {
     initialState
   )
 
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast.success(state.message)
+      } else {
+        toast.error(state.message)
+      }
+    }
+  }, [state])
+
   if (state.success) {
     return (
       <div className="flex flex-col items-center justify-center gap-6 rounded-xl border border-primary/20 bg-primary/5 p-12 text-center animate-in fade-in zoom-in duration-500">
@@ -52,7 +63,7 @@ export function ContactForm() {
   }
 
   return (
-    <form action={formAction} className="flex flex-col gap-8">
+    <form action={formAction} className="flex flex-col gap-5">
       {state.message && !state.success && (
         <div className="flex items-center gap-3 rounded-xl border-2 border-destructive/50 bg-destructive/10 px-5 py-4 text-sm font-semibold text-destructive animate-in slide-in-from-top-4 duration-300">
           <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-destructive/20">
@@ -62,8 +73,8 @@ export function ContactForm() {
         </div>
       )}
 
-      <FieldGroup className="space-y-6">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <FieldGroup className="space-y-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field data-invalid={!!state.errors?.name}>
             <FieldLabel htmlFor="name">Full Name</FieldLabel>
             <Input
