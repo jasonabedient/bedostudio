@@ -1,7 +1,8 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
 import { CheckCircle2, Send } from 'lucide-react'
+import { toast } from 'sonner'
 
 import { submitContactForm, type ContactFormState } from '@/app/actions/contact'
 import { Button } from '@/components/ui/button'
@@ -27,6 +28,16 @@ export function ContactForm() {
     submitContactForm,
     initialState
   )
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast.success(state.message)
+      } else {
+        toast.error(state.message)
+      }
+    }
+  }, [state])
 
   if (state.success) {
     return (

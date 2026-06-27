@@ -3,6 +3,7 @@ import { Mail, Globe, MapPin } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
+import { EmailLink } from "@/components/email-link"
 
 export default async function ContactPage() {
   const headersList = await headers()
@@ -39,9 +40,7 @@ export default async function ContactPage() {
                     <Mail className="h-7 w-6 text-primary" aria-hidden="true" />
                   </dt>
                   <dd>
-                    <a className="hover:text-foreground transition-colors" href="mailto:hello@bedo.studio">
-                      hello@bedo.studio
-                    </a>
+                    <EmailLink email="hello@bedo.studio" />
                   </dd>
                 </div>
                 <div className="flex gap-x-4">
