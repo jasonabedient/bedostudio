@@ -60,7 +60,7 @@ export default async function ContactPage() {
                     <MapPin className="h-7 w-6 text-primary" aria-hidden="true" />
                   </dt>
                   <dd>
-                    Based in the Pacific Northwest<br />
+                    Based in the SF Bay Area<br />
                     Serving Worldwide
                   </dd>
                 </div>
@@ -70,7 +70,7 @@ export default async function ContactPage() {
             {/* Right Column - Form */}
             <div className="relative">
               <div className="rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-8 shadow-2xl ring-1 ring-white/10">
-                <div className="mb-8">
+                <div className="mb-5">
                   <h2 className="text-2xl font-semibold text-foreground">
                     Send a Message
                   </h2>
