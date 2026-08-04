@@ -13,6 +13,7 @@ const channels = [
     color: "from-orange-500/20 to-amber-500/20",
     accentColor: "text-orange-500",
     bgAccent: "bg-orange-500/10",
+    active: true,
   },
   {
     title: "Freedom",
@@ -23,6 +24,7 @@ const channels = [
     color: "from-emerald-500/20 to-teal-500/20",
     accentColor: "text-emerald-500",
     bgAccent: "bg-emerald-500/10",
+    active: false,
   },
   {
     title: "Adventure",
@@ -33,10 +35,13 @@ const channels = [
     color: "from-sky-500/20 to-indigo-500/20",
     accentColor: "text-sky-500",
     bgAccent: "bg-sky-500/10",
+    active: true,
   },
 ]
 
 export function ChannelsSection() {
+  const activeChannels = channels.filter(c => c.active)
+  
   return (
     <section id="channels" className="pt-10 pb-20 md:pt-16 md:pb-28">
       <div className="container mx-auto px-4 md:px-6">
@@ -45,11 +50,11 @@ export function ChannelsSection() {
             Our Channels
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Three unique channels, each with its own focus and community. Find the content that speaks to you.
+            Explore our channels, each with its own focus and community. Find the content that speaks to you.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
-          {channels.map((channel) => (
+        <div className={`grid gap-8 ${activeChannels.length === 2 ? 'md:grid-cols-2 max-w-4xl' : 'md:grid-cols-3'} mx-auto`}>
+          {activeChannels.map((channel) => (
             <Link
               key={channel.title}
               href={channel.href}
