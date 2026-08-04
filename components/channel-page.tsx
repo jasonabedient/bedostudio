@@ -21,7 +21,7 @@ interface ChannelPageProps {
   title: string
   subtitle: string
   description: string
-  longDescription: string
+  longDescription: React.ReactNode
   iconName: keyof typeof iconMap
   youtubeUrl: string
   color: string
