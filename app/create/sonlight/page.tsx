@@ -10,7 +10,7 @@ export default function SonlightSurfshopPage() {
   return (
     <div style={{ width: "100%", height: "100dvh", margin: 0, padding: 0, overflow: "hidden" }}>
       <iframe
-        src="/sonlight-preview.html"
+        src="/sonlight-preview.html?v=2"
         title="Sonlight Surfshop – In-Stock Surfboards"
         style={{
           width: "100%",
